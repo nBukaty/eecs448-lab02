@@ -38,11 +38,12 @@ bool LinkedList<T>::search(T value) const
 {
 	Node<T>* temp = m_front;
 	bool isFound = false;
-
-	/** TODO 
-		Fix this method
-	*/
-
+        for(int x = 0;x<m_size;x++){
+            if(temp -> getValue() == value){
+                isFound = true;//when value is found set to true
+            }
+            temp = temp->getNext();
+        }
 	return(isFound);
 }
 
